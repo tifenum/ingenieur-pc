@@ -13,8 +13,8 @@ L.Icon.Default.mergeOptions({
 });
 
 export default function MapComponent() {
-  // Msaken, Sousse, Tunisia
-  const position = [35.736566, 10.583042];
+  // FIXED: Explicitly typed as an exact 2-element tuple [number, number] to make TypeScript happy
+  const position: [number, number] = [35.736566, 10.583042];
 
   return (
     <div className="w-full h-full relative [filter:hue-rotate(200deg)_brightness(0.6)_contrast(1.2)_saturate(0.75)]">
