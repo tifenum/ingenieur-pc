@@ -19,7 +19,7 @@ export default function MapComponent() {
   return (
     <div className="w-full h-full relative [filter:hue-rotate(200deg)_brightness(0.6)_contrast(1.2)_saturate(0.75)]">
       {/* The inline Tailwind filter rule directly above shifts the base map colors:
-        - hue-rotate(200deg): Cycles yellow/green land out, turning waters into deep tech-blue.
+        - hue-rotate(200deg):aefqsx Cycles yellow/green land out, turning waters into deep tech-blue.
         - brightness/saturate: Softens colors into a sleek dark grey and muted slate finish.
       */}
       <MapContainer
