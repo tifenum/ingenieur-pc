@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#0b112c" />
+      <stop offset="100%" stop-color="#030511" />
+    </radialGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2ff" />
+      <stop offset="50%" stop-color="#7000ff" />
+      <stop offset="100%" stop-color="#ff00aa" />
+    </linearGradient>
+
+    <linearGradient id="neonGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00d9ff" />
+      <stop offset="100%" stop-color="#b066ff" />
+    </linearGradient>
+
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur1" />
+      <feGaussianBlur stdDeviation="20" result="blur2" />
+      
+      <feMerge>
+        <feMergeNode in="blur2" />
+        <feMergeNode in="blur1" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="4" dy="10" stdDeviation="8" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bgGrad)" />
+
+  <g filter="url(#shadow)">
+    <rect x="75" y="50" width="350" height="350" rx="65" 
+          fill="#0d153a" fill-opacity="0.4"
+          stroke="url(#borderGrad)" stroke-width="6" 
+          filter="url(#neonGlow)" />
+
+    <g stroke="url(#neonGrad)" stroke-linecap="round" fill="none" opacity="0.4" filter="url(#neonGlow)">
+      <circle cx="145" cy="155" r="14" fill="url(#neonGrad)" />
+      <path d="M145,210 L145,300 A35,35 0 0,0 215,300 L215,225 A45,45 0 0,1 305,225" stroke-width="26" />
+      <path d="M365,195 A60,60 0 1,0 365,305" stroke-width="22" />
+    </g>
+
+    <g stroke="url(#neonGrad)" stroke-linecap="round" fill="none">
+      <circle cx="145" cy="155" r="10" fill="#ffffff" stroke="#00f2ff" stroke-width="3" />
+      <path d="M145,210 L145,300 A35,35 0 0,0 215,300 L215,225 A45,45 0 0,1 305,225" stroke-width="16" />
+      <path d="M145,212 L145,298 A35,35 0 0,0 215,298 L215,225 A45,45 0 0,1 305,225" stroke-width="6" stroke="#ffffff" opacity="0.9" />
+      
+      <path d="M365,195 A60,60 0 1,0 365,305" stroke-width="13" />
+      <path d="M362,198 A60,60 0 1,0 362,302" stroke-width="4" stroke="#ffffff" opacity="0.9" />
+    </g>
+
+    <circle cx="375" cy="345" r="10" fill="none" stroke="url(#neonGrad)" stroke-width="2" />
+    <text x="375" y="349" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="url(#neonGrad)" text-anchor="middle">R</text>
+
+    <text x="250" y="450" 
+          font-family="'Montserrat', 'Segoe UI', sans-serif" 
+          font-size="36" 
+          font-weight="800" 
+          letter-spacing="4"
+          fill="#ffffff" 
+          text-anchor="middle"
+          filter="url(#neonGlow)">
+      INGÉNIEUR PC
+    </text>
+  </g>
+</svg>
