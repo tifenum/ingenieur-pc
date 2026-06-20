@@ -60,7 +60,7 @@ export default function HeroHome() {
           />
           {/* Brand Logos - Under the thumbnail */}
           <div className="mt-20 pt-10 border-t border-white/10">
-            <p className="text-center text-sm text-indigo-200/50 mb-10">Nous travaillons avec les plus grandes marques</p>
+            <p className="text-center text-sm text-indigo-200/50 mb-10">Nous travaillons avec les plus grandes marques et systèmes</p>
             <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-12 max-w-5xl mx-auto px-6">
               {[
                 { type: "cdn", src: "https://unpkg.com/simple-icons@v14/icons/apple.svg", alt: "Apple" },
@@ -73,48 +73,46 @@ export default function HeroHome() {
                     </svg>
                   ) 
                 },
+                { type: "cdn", src: "https://unpkg.com/simple-icons@v14/icons/linux.svg", alt: "Linux" },
                 { type: "cdn", src: "https://unpkg.com/simple-icons@v14/icons/lenovo.svg", alt: "Lenovo" },
-{ 
-  type: "inline", 
-  alt: "IBM", 
-  svg: (
-    <svg viewBox="0 0 32 14" fill="currentColor" className="h-9 w-auto object-contain">
-      {/* Letter I */}
-      <g>
-        <rect x="0" y="0" width="6" height="1" />
-        <rect x="0" y="1.8" width="6" height="1" />
-        <rect x="1.8" y="3.6" width="2.4" height="1" />
-        <rect x="1.8" y="5.4" width="2.4" height="1" />
-        <rect x="1.8" y="7.2" width="2.4" height="1" />
-        <rect x="1.8" y="9" width="2.4" height="1" />
-        <rect x="0" y="10.8" width="6" height="1" />
-        <rect x="0" y="12.6" width="6" height="1" />
-      </g>
-      {/* Letter B */}
-      <g>
-        <rect x="8" y="0" width="9" height="1" />
-        <rect x="8" y="1.8" width="9.5" height="1" />
-        <rect x="8" y="3.6" width="3" height="1" /><rect x="14.5" y="3.6" width="3" height="1" />
-        <rect x="8" y="5.4" width="9" height="1" />
-        <rect x="8" y="7.2" width="9.2" height="1" />
-        <rect x="8" y="9" width="3" height="1" /><rect x="14.7" y="9" width="3.2" height="1" />
-        <rect x="8" y="10.8" width="9.8" height="1" />
-        <rect x="8" y="12.6" width="9" height="1" />
-      </g>
-      {/* Letter M */}
-      <g>
-        <rect x="20" y="0" width="3" height="1" /><rect x="29" y="0" width="3" height="1" />
-        <rect x="20" y="1.8" width="3.4" height="1" /><rect x="24.8" y="1.8" width="2.4" height="1" /><rect x="28.6" y="1.8" width="3.4" height="1" />
-        <rect x="20" y="3.6" width="3.8" height="1" /><rect x="24.3" y="3.6" width="3.4" height="1" /><rect x="28.2" y="3.6" width="3.8" height="1" />
-        <rect x="20" y="5.4" width="4.2" height="1" /><rect x="27.8" y="5.4" width="4.2" height="1" />
-        <rect x="20" y="7.2" width="2.5" height="1" /><rect x="23.8" y="7.2" width="1.2" height="1" /><rect x="27" y="7.2" width="1.2" height="1" /><rect x="29.5" y="7.2" width="2.5" height="1" />
-        <rect x="20" y="9" width="2.5" height="1" /><rect x="24.8" y="9" width="2.4" height="1" /><rect x="29.5" y="9" width="2.5" height="1" />
-        <rect x="20" y="10.8" width="2.5" height="1" /><rect x="29.5" y="10.8" width="2.5" height="1" />
-        <rect x="20" y="12.6" width="2.5" height="1" /><rect x="29.5" y="12.6" width="2.5" height="1" />
-      </g>
-    </svg>
-  ) 
-},
+                { 
+                  type: "inline", 
+                  alt: "IBM", 
+                  svg: (
+                    <svg viewBox="0 0 32 14" fill="currentColor" className="h-9 w-auto object-contain">
+                      <g>
+                        <rect x="0" y="0" width="6" height="1" />
+                        <rect x="0" y="1.8" width="6" height="1" />
+                        <rect x="1.8" y="3.6" width="2.4" height="1" />
+                        <rect x="1.8" y="5.4" width="2.4" height="1" />
+                        <rect x="1.8" y="7.2" width="2.4" height="1" />
+                        <rect x="1.8" y="9" width="2.4" height="1" />
+                        <rect x="0" y="10.8" width="6" height="1" />
+                        <rect x="0" y="12.6" width="6" height="1" />
+                      </g>
+                      <g>
+                        <rect x="8" y="0" width="9" height="1" />
+                        <rect x="8" y="1.8" width="9.5" height="1" />
+                        <rect x="8" y="3.6" width="3" height="1" /><rect x="14.5" y="3.6" width="3" height="1" />
+                        <rect x="8" y="5.4" width="9" height="1" />
+                        <rect x="8" y="7.2" width="9.2" height="1" />
+                        <rect x="8" y="9" width="3" height="1" /><rect x="14.7" y="9" width="3.2" height="1" />
+                        <rect x="8" y="10.8" width="9.8" height="1" />
+                        <rect x="8" y="12.6" width="9" height="1" />
+                      </g>
+                      <g>
+                        <rect x="20" y="0" width="3" height="1" /><rect x="29" y="0" width="3" height="1" />
+                        <rect x="20" y="1.8" width="3.4" height="1" /><rect x="24.8" y="1.8" width="2.4" height="1" /><rect x="28.6" y="1.8" width="3.4" height="1" />
+                        <rect x="20" y="3.6" width="3.8" height="1" /><rect x="24.3" y="3.6" width="3.4" height="1" /><rect x="28.2" y="3.6" width="3.8" height="1" />
+                        <rect x="20" y="5.4" width="4.2" height="1" /><rect x="27.8" y="5.4" width="4.2" height="1" />
+                        <rect x="20" y="7.2" width="2.5" height="1" /><rect x="23.8" y="7.2" width="1.2" height="1" /><rect x="27" y="7.2" width="1.2" height="1" /><rect x="29.5" y="7.2" width="2.5" height="1" />
+                        <rect x="20" y="9" width="2.5" height="1" /><rect x="24.8" y="9" width="2.4" height="1" /><rect x="29.5" y="9" width="2.5" height="1" />
+                        <rect x="20" y="10.8" width="2.5" height="1" /><rect x="29.5" y="10.8" width="2.5" height="1" />
+                        <rect x="20" y="12.6" width="2.5" height="1" /><rect x="29.5" y="12.6" width="2.5" height="1" />
+                      </g>
+                    </svg>
+                  ) 
+                },
                 { type: "cdn", src: "https://unpkg.com/simple-icons@v14/icons/dell.svg", alt: "Dell" },
                 { type: "cdn", src: "https://unpkg.com/simple-icons@v14/icons/hp.svg", alt: "HP" },
                 { type: "cdn", src: "https://unpkg.com/simple-icons@v14/icons/samsung.svg", alt: "Samsung" },

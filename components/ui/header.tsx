@@ -39,23 +39,27 @@ export default function Header() {
 
           {/* Navigation */}
           <nav className="flex items-center gap-6 md:gap-8 text-sm font-medium mx-auto">
-            <Link href="#accueil" className="text-gray-300 hover:text-[#3B9EFF] transition-colors">
+            {/* 🔴 Added "/" before hashes so redirect routes correctly from any page level layout */}
+            <Link href="/#accueil" className="text-gray-300 hover:text-[#3B9EFF] transition-colors">
               Accueil
             </Link>
-            <Link href="#Processus" className="text-gray-300 hover:text-[#3B9EFF] transition-colors">
-              processus
+            <Link href="/#Processus" className="text-gray-300 hover:text-[#3B9EFF] transition-colors">
+              Processus
             </Link>
-            <Link href="#services" className="text-gray-300 hover:text-[#3B9EFF] transition-colors">
+            <Link href="/#services" className="text-gray-300 hover:text-[#3B9EFF] transition-colors">
               Services
             </Link>
-            <Link href="#avantages" className="text-gray-300 hover:text-[#3B9EFF] transition-colors">
+            <Link href="/marketplace" className="text-gray-300 hover:text-[#3B9EFF] transition-colors">
+              Marketplace
+            </Link>
+            <Link href="/#avantages" className="text-gray-300 hover:text-[#3B9EFF] transition-colors">
               Pourquoi Nous
             </Link>
-            <Link href="#temoignages" className="text-gray-300 hover:text-[#3B9EFF] transition-colors">
+            <Link href="/#temoignages" className="text-gray-300 hover:text-[#3B9EFF] transition-colors">
               Avis
             </Link>
-            <Link href="#contact" className="text-gray-300 hover:text-[#3B9EFF] transition-colors">
-              Addresse
+            <Link href="/#contact" className="text-gray-300 hover:text-[#3B9EFF] transition-colors">
+              Adresse
             </Link>
           </nav>
 

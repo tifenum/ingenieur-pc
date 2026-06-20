@@ -2,9 +2,8 @@ import Image from "next/image";
 import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
 import BlurredShape from "@/public/images/blurred-shape.svg";
 
-// You can create or use a central diagram image (recommended)
-// For now we'll use a nice placeholder — replace with your own visual
-import CentralDiagram from "@/public/images/hero-image-01.jpg"; // ← Add this image
+// Central diagram image
+import CentralDiagram from "@/public/images/hero-image-01.jpg";
 
 export default function Features() {
   const services = [
@@ -44,16 +43,15 @@ export default function Features() {
       desc: "PC Gamer, Workstation ou stockage haut de gamme."
     },
     {
-      icon: "📱",
-      title: "Remplacement Écran",
-      desc: "Pour PC portables Windows & MacBook."
-    },
-    {
       icon: "🔗",
       title: "Réseaux & Serveurs",
       desc: "Installation NAS, Cloud, et infrastructure réseau."
     },
   ];
+
+  // Separate regular 3-column rows from the last custom elements
+  const mainServices = services.slice(0, 6);
+  const bottomTwoServices = services.slice(6);
 
   return (
     <section className="relative py-12 md:py-20 overflow-hidden">
@@ -92,31 +90,51 @@ export default function Features() {
                 alt="Processus Ingénieur PC"
                 className="rounded-3xl shadow-2xl"
               />
-              {/* Optional glowing overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-indigo-500/10 to-transparent rounded-3xl pointer-events-none" />
             </div>
           </div>
 
-          {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className="group relative bg-gray-900/70 border border-white/10 hover:border-indigo-500/30 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div className="text-4xl mb-6 transition-transform group-hover:scale-110">
-                  {service.icon}
+          {/* Features Grid Space */}
+          <div className="space-y-6">
+            {/* First 6 services mapped into a clean grid */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {mainServices.map((service, index) => (
+                <div
+                  key={index}
+                  className="group relative bg-gray-900/70 border border-white/10 hover:border-indigo-500/30 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                >
+                  <div className="text-4xl mb-6 transition-transform group-hover:scale-110">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-100 mb-3 font-nacelle">
+                    {service.title}
+                  </h3>
+                  <p className="text-indigo-200/70 leading-relaxed">
+                    {service.desc}
+                  </p>
                 </div>
-                
-                <h3 className="text-xl font-semibold text-gray-100 mb-3 font-nacelle">
-                  {service.title}
-                </h3>
-                
-                <p className="text-indigo-200/70 leading-relaxed">
-                  {service.desc}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
+
+            {/* Bottom row specifically centered using Flexbox on medium/large screens */}
+            <div className="flex flex-col md:flex-row md:justify-center gap-6">
+              {bottomTwoServices.map((service, index) => (
+                <div
+                  key={index}
+                  className="group relative bg-gray-900/70 border border-white/10 hover:border-indigo-500/30 rounded-3xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl w-full md:max-w-[calc(50%-12px)] lg:max-w-[362px]"
+                >
+                  <div className="text-4xl mb-6 transition-transform group-hover:scale-110">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-100 mb-3 font-nacelle">
+                    {service.title}
+                  </h3>
+                  <p className="text-indigo-200/70 leading-relaxed">
+                    {service.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Stats */}
